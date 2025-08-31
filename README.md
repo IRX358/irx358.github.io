@@ -1,6 +1,6 @@
 # 🌟 Protfolio_web_ir
 
-[![GitHub Pages](https://img.shields.io/badge/deployed-live-success?style=flat&logo=github)](https://IRX358.github.io/Protfolio_web_ir/)
+[![GitHub Pages](https://img.shields.io/badge/deployed-live-success?style=flat&logo=github)](https://IRX358.github.io/irx358.github.io/)
 [![React](https://img.shields.io/badge/react-18-blue?logo=react)](https://react.dev)
 
 ---
@@ -34,7 +34,7 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/IRX358/Protfolio_web_ir.git
+git clone https://github.com/IRX358/irx358.github.io.git
 ```
 Install dependencies:
 ```
@@ -57,7 +57,7 @@ The production build will appear in the dist/ folder.
 
 This project is deployed on GitHub Pages:
 
-🌐<a href="https://IRX358.github.io/Protfolio_web_ir/" target='_blank' > View Live</a>
+🌐<a href="https://IRX358.github.io/irx358.github.io/" target='_blank' > View Live</a>
 
 
 ---
@@ -86,4 +86,4 @@ This project is deployed on GitHub Pages:
 ---
 
 >  © 2025 Irfan IR || 
-            Built with great MOOD😎 , EXCITEMENT🤩 and CURIOSITY🤔
+            Built with CURIOSITY
