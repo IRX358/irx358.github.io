@@ -7,14 +7,14 @@ function App() {
   const skills = {
     frontend: [
       { name: 'HTML5', level: 95 },
-      { name: 'CSS3', level: 85 },
-      { name: 'JavaScript', level: 15 },
-      { name: 'Bootstrap 4', level: 20 },
-      { name: 'Tailwind CSS', level: 0 },
-      { name: 'React', level: 10 }
+      { name: 'CSS3', level: 95 },
+      { name: 'JavaScript', level: 90 },
+      { name: 'Bootstrap 4', level: 80 },
+      { name: 'Tailwind CSS', level: 80 },
+      { name: 'React', level: 60 }
     ],
     backend: [
-      { name: 'Python (Flask)', level: 65 },
+      { name: 'Python (Flask)', level: 75 },
       { name: 'PHP (MySQL)', level: 70 },
       { name: 'REST API', level: 0 },
       { name: 'Node js', level: 0 },
@@ -56,7 +56,7 @@ function App() {
       status: 'Completed',
       description: 'Modern and responsive portfolio built with HTML, CSS, and JavaScript, showcasing personal projects, skills, and contact features.',
       tech: ['React','Tailwind CSS','TypeScript','Node','Vite'],
-      link:'https://github.com/IRX358/Protfolio_web_ir',
+      link:'https://irx358.github.io',
       color: 'from-cyan-500 to-blue-600'
     },
     {
@@ -423,7 +423,7 @@ function App() {
           </div>
           <p className="text-slate-400 mb-4">
             © 2025 Irfan IR || 
-            Built with great MOOD😎 , EXCITEMENT🤩 and CURIOSITY🤔
+            Built with CURIOSITY
           </p>
           <p className="text-sm text-slate-500">
             "Building reliable, creative, and future-ready web solutions"
