@@ -368,7 +368,7 @@ function App() {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
                 
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full overflow-hidden flex items-center justify-center mx-auto mb-4">
-                  <img src='/Protfolio_web_ir/badge.svg' alt='profile_pic' className="w-10 h-10 object-cover invert" />
+                  <img src='/irx358.github.io/badge.svg' alt='profile_pic' className="w-10 h-10 object-cover invert" />
                 </div>
                 <p className="text-sm text-slate-300">{certi}</p>
               </div>
