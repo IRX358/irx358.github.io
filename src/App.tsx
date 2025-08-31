@@ -92,7 +92,7 @@ function App() {
               {/* <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> */}
                 {/* <Code className="w-6 h-6 text-white" /> */}
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <img src="/Protfolio_web_ir/pfp0.jpg" alt="profile" className="w-full h-full object-cover"/>
+                <img src="/irx358.github.io/pfp0.jpg" alt="profile" className="w-full h-full object-cover"/>
               </div>
               <div>
                 <h1 className="text-xl font-bold">IRFAN IR</h1>
@@ -141,7 +141,7 @@ function App() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-               <a href="\Protfolio_web_ir\resume_01.pdf" target='_blank'>  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-cyan-500/25">
+               <a href="\irx358.github.io\resume_01.pdf" target='_blank'>  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-cyan-500/25">
                   <Download className="w-5 h-5" />
                  <span>Download Resume</span>
                 </button></a>
@@ -157,7 +157,7 @@ function App() {
                   <User className="w-32 h-32 text-white" />
                 </div> */}
                 <div className="w-64 h-64 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full overflow-hidden flex items-center justify-center">
-                  <img src='/Protfolio_web_ir/pfp1.jpg' alt='profile_pic' className="w-full h-full object-cover " />
+                  <img src='/irx358.github.io/pfp1.jpg' alt='profile_pic' className="w-full h-full object-cover " />
                 </div>
 
               </div>
