@@ -92,7 +92,7 @@ function App() {
               {/* <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"> */}
                 {/* <Code className="w-6 h-6 text-white" /> */}
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <img src="/irx358.github.io/pfp0.jpg" alt="profile" className="w-full h-full object-cover"/>
+                <img src="/irx358.github.io/public/pfp0.jpg" alt="profile" className="w-full h-full object-cover"/>
               </div>
               <div>
                 <h1 className="text-xl font-bold">IRFAN IR</h1>
@@ -157,7 +157,7 @@ function App() {
                   <User className="w-32 h-32 text-white" />
                 </div> */}
                 <div className="w-64 h-64 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full overflow-hidden flex items-center justify-center">
-                  <img src='/irx358.github.io/pfp1.jpg' alt='profile_pic' className="w-full h-full object-cover " />
+                  <img src='/irx358.github.io/public/pfp1.jpg' alt='profile_pic' className="w-full h-full object-cover " />
                 </div>
 
               </div>
@@ -368,7 +368,7 @@ function App() {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
                 
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full overflow-hidden flex items-center justify-center mx-auto mb-4">
-                  <img src='/irx358.github.io/badge.svg' alt='profile_pic' className="w-10 h-10 object-cover invert" />
+                  <img src='/irx358.github.io/public/badge.svg' alt='profile_pic' className="w-10 h-10 object-cover invert" />
                 </div>
                 <p className="text-sm text-slate-300">{certi}</p>
               </div>
