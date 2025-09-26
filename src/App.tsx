@@ -157,7 +157,7 @@ function App() {
                   <User className="w-32 h-32 text-white" />
                 </div> */}
                 <div className="w-64 h-64 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full overflow-hidden flex items-center justify-center">
-                  <img src='/pfp1.jpg' alt='profile_pic' className="w-full h-full object-cover " />
+                  <img src='/pfp2.jpg' alt='profile_pic' className="w-full h-full object-cover " />
                 </div>
 
               </div>
