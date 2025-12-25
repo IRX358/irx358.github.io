@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Phone, Code, Database, Globe, Zap, ArrowRight, ExternalLink, Download, User, Briefcase, Award, MessageSquare } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Code, Database, Globe ,Zap, ArrowRight, ExternalLink, Download, User, Briefcase, Award, MessageSquare } from 'lucide-react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -8,29 +8,44 @@ function App() {
     frontend: [
       { name: 'HTML5', level: 95 },
       { name: 'CSS3', level: 95 },
-      { name: 'JavaScript', level: 90 },
-      { name: 'Bootstrap 4', level: 80 },
-      { name: 'Tailwind CSS', level: 80 },
+      { name: 'JavaScript', level: 68 },
+      { name: 'Bootstrap & Tailwind CSS', level: 80 },
       { name: 'React', level: 60 }
     ],
     backend: [
-      { name: 'Python (Flask)', level: 75 },
-      { name: 'PHP (MySQL)', level: 70 },
-      { name: 'REST API', level: 0 },
+      { name: 'Python - Flask', level: 75 },
+      { name: 'Pyhton - FASTAPI', level: 60 },
+      { name: 'PHP', level: 40 },
       { name: 'Node js', level: 0 },
-      { name: 'Express js', level: 0 },
       { name: 'TypeScript', level: 0 }
     ],
     databases: [
       { name: 'MySQL', level: 90 },
-      { name: 'MongoDB', level: 0 },
-      { name: 'PostgreSQL', level: 0 }
+      { name: 'PostgreSQL', level: 70 },
+      { name: 'MongoDB', level: 0 }
     ],
     tools: [
-      { name: 'Git & GitHub', level: 75 },
+      { name: 'Git & GitHub', level: 85 },
       { name: 'VS Code', level: 95 },
-      { name: 'Virtual Environments', level: 40 },
-      { name: 'Agile & Scrum', level: 70 }
+      { name: 'Virtual Environments', level: 80 },
+      { name: 'Docker', level: 0 },
+      { name: 'CI/CD Pipeline', level: 0 },
+      { name: 'Agile & Scrum', level: 0 }
+    ],
+    CyberSecurity: [
+      { name: 'Kali Linux', level: 0 },
+      { name: 'Wireshark', level: 0 },
+      { name: 'OpenVAS', level: 0 },
+      { name: 'OWASP ZAP', level: 0 },
+      { name: 'Metasploit', level: 0 },
+      { name: 'Wiz', level: 0 }
+    ],
+    ML:[
+      {name : 'NumPy',level: 12},
+      {name : 'Pandas',level: 10},
+      {name : 'PyTorch',level: 0},
+      {name : 'TensorFlow',level: 0},
+      {name : 'Hugging Face',level: 0}
     ]
   };
 
@@ -178,7 +193,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Technical Skills</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              A comprehensive toolkit for building modern web applications from frontend to backend
+              A comprehensive toolkit of Frontend | Backend | DB with usage levels in my projects<br></br>[ with the ones I'm curious to learn ]
             </p>
           </div>
 
@@ -252,9 +267,58 @@ function App() {
               </div>
             </div>
 
+             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <Zap className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-xl font-semibold">ML</h3>
+              </div>
+              <div className="space-y-4">
+                {skills.ML.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm">{skill.name}</span>
+                      <span className="text-sm text-cyan-400">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
+             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <Globe className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-xl font-semibold">CyberSecurity</h3>
+              </div>
+              <div className="space-y-4">
+                {skills.CyberSecurity.map((skill, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between mb-2">
+                      <span className="text-sm">{skill.name}</span>
+                      <span className="text-sm text-cyan-400">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
+
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <Award className="w-8 h-8 text-cyan-400 mr-3" />
+                <ArrowRight className="w-8 h-8 text-cyan-400 mr-3" />
                 <h3 className="text-xl font-semibold">Tools & More</h3>
               </div>
               <div className="space-y-4">
@@ -282,7 +346,7 @@ function App() {
       <section id="projects" className="relative z-10 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Featured Mini Projects</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               A showcase of my work spanning web development, backend systems, and full-stack applications
             </p>
