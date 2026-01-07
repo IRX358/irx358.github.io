@@ -75,7 +75,7 @@ function App() {
       status: 'Completed',
       description: ' An AI-powered fleet management prototype designed to modernize the BMTC by bridging the gap between control centers and on-field conductors. Built with an intelligent Recommendation Engine that analyzes historical ticketing data to predict passenger demand and optimize bus-route allocation.',
       tech: ['WebDev', 'FastAPI', 'Model Training'],
-      link: 'https://github.com/IRX358/RouteSaathi_Prototype',
+      link: 'https://routesaathi-prototype.vercel.app/',
       icon: 'bus',
       color: 'from-green-500 to-teal-600'
     },
@@ -415,7 +415,7 @@ function App() {
                   <a href={project.link} target="_blank">
                     <button className="w-full flex items-center justify-center space-x-2 py-2 border border-slate-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300">
                       <ExternalLink className="w-4 h-4" />
-                      <span>View Details</span>
+                      <span>View Details/Site </span>
                     </button></a>
                 </div>
               );
