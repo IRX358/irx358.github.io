@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=Permanent+Marker&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paper Light Mode */
+    --background: 45 33% 97%;
+    --foreground: 0 0% 18%;
+
+    --card: 45 33% 97%;
+    --card-foreground: 0 0% 18%;
+
+    --popover: 45 33% 97%;
+    --popover-foreground: 0 0% 18%;
+
+    --primary: 0 0% 18%;
+    --primary-foreground: 45 33% 97%;
+
+    --secondary: 45 20% 92%;
+    --secondary-foreground: 0 0% 18%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 210 79% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 354 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+
+    --highlight: 60 100% 50%;
+    --highlight-foreground: 0 0% 18%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 210 79% 53%;
+
+    --radius: 0.5rem;
+
+    /* Custom sketch colors */
+    --ink: 0 0% 18%;
+    --ink-light: 0 0% 40%;
+    --paper: 45 33% 97%;
+    --red-pen: 354 70% 54%;
+    --blue-pen: 210 79% 53%;
+    --yellow-highlight: 60 100% 50%;
+
+    --sidebar-background: 45 33% 97%;
+    --sidebar-foreground: 0 0% 18%;
+    --sidebar-primary: 0 0% 18%;
+    --sidebar-primary-foreground: 45 33% 97%;
+    --sidebar-accent: 45 20% 92%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 45 20% 85%;
+    --sidebar-ring: 210 79% 53%;
+  }
+
+  .dark {
+    /* Blueprint Dark Mode */
+    --background: 0 0% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 210 79% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 354 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+
+    --highlight: 60 100% 50%;
+    --highlight-foreground: 0 0% 18%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 210 79% 53%;
+
+    /* Custom sketch colors - dark mode */
+    --ink: 210 40% 98%;
+    --ink-light: 210 20% 70%;
+    --paper: 0 0% 10%;
+    --red-pen: 354 70% 54%;
+    --blue-pen: 210 79% 60%;
+    --yellow-highlight: 60 100% 50%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 210 79% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Fira Code', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', cursive;
+  }
+}
+
+@layer components {
+  /* Paper texture overlay */
+  .paper-texture {
+    position: relative;
+  }
+
+  .paper-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Graph paper grid */
+  .graph-paper {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Squigglevision effect for borders */
+  @keyframes squiggle {
+    0%, 100% { filter: url('#squiggle-0'); }
+    25% { filter: url('#squiggle-1'); }
+    50% { filter: url('#squiggle-2'); }
+    75% { filter: url('#squiggle-3'); }
+  }
+
+  .squiggle-border {
+    animation: squiggle 0.4s linear infinite;
+  }
+
+  /* Hand-drawn underline animation */
+  .sketch-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .sketch-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: hsl(var(--accent));
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    transform: rotate(-1deg);
+  }
+
+  .sketch-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Masking tape style */
+  .masking-tape {
+    @apply px-3 py-1 text-xs font-medium;
+    background: hsl(var(--highlight) / 0.7);
+    color: hsl(var(--highlight-foreground));
+    transform: rotate(-2deg);
+    box-shadow: 2px 2px 4px hsl(var(--foreground) / 0.1);
+  }
+
+  /* Handwriting style for input */
+  .handwriting-input {
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+    border: none;
+    border-bottom: 2px dashed hsl(var(--border));
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+
+  .handwriting-input:focus {
+    outline: none;
+    border-bottom-color: hsl(var(--accent));
+    border-bottom-style: solid;
+  }
+
+  /* Polaroid style frame */
+  .polaroid {
+    @apply bg-card p-3 pb-12 shadow-lg;
+    transform: rotate(2deg);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* Yellow highlight marker effect */
+  .highlight-marker {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 40%,
+      hsl(var(--highlight) / 0.4) 40%,
+      hsl(var(--highlight) / 0.4) 90%,
+      transparent 90%
+    );
+    padding: 0 4px;
+  }
+
+  /* Sketchy button */
+  .sketch-button {
+    @apply px-6 py-3 font-medium transition-all duration-200;
+    font-family: 'Permanent Marker', cursive;
+    border: 2px solid hsl(var(--foreground));
+    border-radius: 4px 12px 4px 12px;
+    position: relative;
+    background: hsl(var(--background));
+  }
+
+  .sketch-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 hsl(var(--foreground));
+  }
+
+  .sketch-button:active {
+    transform: translate(0, 0);
+    box-shadow: none;
+  }
+
+  /* Paperclip decoration */
+  .paperclip::before {
+    content: '📎';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 2rem;
+    transform: rotate(15deg);
+  }
+}
+
+@layer utilities {
+  .font-marker {
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+
+  .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+
+  /* Text shadow for sketch effect */
+  .text-sketch {
+    text-shadow: 
+      1px 1px 0 hsl(var(--background)),
+      -1px -1px 0 hsl(var(--background)),
+      1px -1px 0 hsl(var(--background)),
+      -1px 1px 0 hsl(var(--background));
+  }
+}
