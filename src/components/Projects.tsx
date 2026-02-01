@@ -101,7 +101,7 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
             initial={{ y: 20, x: 10 }}
             whileHover={{ y: 0, x: 0 }}
           >
-            <div className="text-4xl transform -rotate-12">🐙</div>
+            <div className="text-4xl transform -rotate-12">🐼</div>
           </motion.div>
         )}
       </div>
