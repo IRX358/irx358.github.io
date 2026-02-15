@@ -70,7 +70,7 @@ const Contact = () => {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="handwriting-input w-full py-2"
-              placeholder="John Doe"
+              placeholder="Elon Musk"
               required
             />
             {/* Lined paper effect */}
@@ -88,7 +88,7 @@ const Contact = () => {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="handwriting-input w-full py-2"
-              placeholder="john@example.com"
+              placeholder="elon@tesla.com"
               required
             />
             <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
