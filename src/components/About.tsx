@@ -112,7 +112,7 @@ const About = () => {
               <span className="font-handwriting text-lg md:text-2xl text-accent whitespace-nowrap">
                 <b>This guy is creative uhh! ✨</b>
               </span>
-              <svg width="50" height="25" viewBox="0 0 50 25" className="text-red-500 hidden md:block">
+              <svg width="50" height="25" viewBox="0 0 50 25" className="text-accent hidden md:block">
                 <motion.path
                   d="M5 12 Q 25 4, 40 12 Q 43 14, 45 12"
                   fill="none"

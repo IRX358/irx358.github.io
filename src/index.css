@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=Permanent+Marker&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=Permanent+Marker&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,107 +6,107 @@
 
 @layer base {
   :root {
-    /* Paper Light Mode */
-    --background: 45 33% 97%;
-    --foreground: 0 0% 18%;
+    /* White with Red Shades - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 45 33% 97%;
-    --card-foreground: 0 0% 18%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 45 33% 97%;
-    --popover-foreground: 0 0% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 0 0% 18%;
-    --primary-foreground: 45 33% 97%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 20% 92%;
-    --secondary-foreground: 0 0% 18%;
+    --secondary: 0 60% 96%;
+    --secondary-foreground: 0 72% 25%;
 
-    --muted: 45 20% 92%;
+    --muted: 0 20% 95%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 210 79% 53%;
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 354 70% 54%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --highlight: 60 100% 50%;
-    --highlight-foreground: 0 0% 18%;
+    --highlight: 0 100% 88%;
+    --highlight-foreground: 0 72% 25%;
 
-    --border: 45 20% 85%;
-    --input: 45 20% 85%;
-    --ring: 210 79% 53%;
+    --border: 0 20% 90%;
+    --input: 0 20% 92%;
+    --ring: 0 72% 51%;
 
     --radius: 0.5rem;
 
     /* Custom sketch colors */
-    --ink: 0 0% 18%;
+    --ink: 0 0% 10%;
     --ink-light: 0 0% 40%;
-    --paper: 45 33% 97%;
-    --red-pen: 354 70% 54%;
-    --blue-pen: 210 79% 53%;
-    --yellow-highlight: 60 100% 50%;
+    --paper: 0 0% 100%;
+    --red-pen: 0 72% 51%;
+    --blue-pen: 0 84% 60%;
+    --yellow-highlight: 0 100% 88%;
 
-    --sidebar-background: 45 33% 97%;
-    --sidebar-foreground: 0 0% 18%;
-    --sidebar-primary: 0 0% 18%;
-    --sidebar-primary-foreground: 45 33% 97%;
-    --sidebar-accent: 45 20% 92%;
-    --sidebar-accent-foreground: 0 0% 18%;
-    --sidebar-border: 45 20% 85%;
-    --sidebar-ring: 210 79% 53%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 60% 96%;
+    --sidebar-accent-foreground: 0 72% 25%;
+    --sidebar-border: 0 20% 90%;
+    --sidebar-ring: 0 72% 51%;
   }
 
   .dark {
-    /* Blueprint Dark Mode */
-    --background: 0 0% 10%;
-    --foreground: 210 40% 98%;
+    /* Dark Black with Purple Shades - Dark Mode */
+    --background: 270 15% 8%;
+    --foreground: 270 20% 96%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 270 15% 10%;
+    --card-foreground: 270 20% 96%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 270 15% 10%;
+    --popover-foreground: 270 20% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 270 70% 65%;
+    --primary-foreground: 270 15% 8%;
 
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 270 30% 15%;
+    --secondary-foreground: 270 70% 85%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 210 20% 70%;
+    --muted: 270 20% 18%;
+    --muted-foreground: 270 15% 65%;
 
-    --accent: 210 79% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 280 80% 70%;
+    --accent-foreground: 270 15% 8%;
 
-    --destructive: 354 70% 54%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --highlight: 60 100% 50%;
-    --highlight-foreground: 0 0% 18%;
+    --highlight: 270 100% 75%;
+    --highlight-foreground: 270 15% 8%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 210 79% 53%;
+    --border: 270 20% 20%;
+    --input: 270 20% 20%;
+    --ring: 270 70% 65%;
 
     /* Custom sketch colors - dark mode */
-    --ink: 210 40% 98%;
-    --ink-light: 210 20% 70%;
-    --paper: 0 0% 10%;
-    --red-pen: 354 70% 54%;
-    --blue-pen: 210 79% 60%;
-    --yellow-highlight: 60 100% 50%;
+    --ink: 270 20% 96%;
+    --ink-light: 270 15% 65%;
+    --paper: 270 15% 8%;
+    --red-pen: 0 72% 51%;
+    --blue-pen: 270 70% 65%;
+    --yellow-highlight: 270 100% 75%;
 
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 0 0% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 210 79% 53%;
+    --sidebar-background: 270 15% 8%;
+    --sidebar-foreground: 270 20% 96%;
+    --sidebar-primary: 270 70% 65%;
+    --sidebar-primary-foreground: 270 15% 8%;
+    --sidebar-accent: 270 30% 15%;
+    --sidebar-accent-foreground: 270 70% 85%;
+    --sidebar-border: 270 20% 20%;
+    --sidebar-ring: 270 70% 65%;
   }
 }
 
@@ -115,13 +115,63 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Fira Code', monospace;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Permanent Marker', cursive;
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Fira Code", monospace;
+    /* Enable smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Optimize for animations */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Permanent Marker", cursive;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hardware acceleration for better performance */
+  * {
+    transform: translateZ(0);
+    will-change: auto;
+  }
+
+  /* Optimize animations */
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -132,7 +182,7 @@
   }
 
   .paper-texture::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
@@ -143,7 +193,7 @@
 
   /* Graph paper grid */
   .graph-paper {
-    background-image: 
+    background-image:
       linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
     background-size: 20px 20px;
@@ -151,10 +201,19 @@
 
   /* Squigglevision effect for borders */
   @keyframes squiggle {
-    0%, 100% { filter: url('#squiggle-0'); }
-    25% { filter: url('#squiggle-1'); }
-    50% { filter: url('#squiggle-2'); }
-    75% { filter: url('#squiggle-3'); }
+    0%,
+    100% {
+      filter: url("#squiggle-0");
+    }
+    25% {
+      filter: url("#squiggle-1");
+    }
+    50% {
+      filter: url("#squiggle-2");
+    }
+    75% {
+      filter: url("#squiggle-3");
+    }
   }
 
   .squiggle-border {
@@ -168,7 +227,7 @@
   }
 
   .sketch-underline::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -195,7 +254,7 @@
 
   /* Handwriting style for input */
   .handwriting-input {
-    font-family: 'Caveat', cursive;
+    font-family: "Caveat", cursive;
     font-size: 1.25rem;
     border: none;
     border-bottom: 2px dashed hsl(var(--border));
@@ -232,7 +291,7 @@
   /* Sketchy button */
   .sketch-button {
     @apply px-6 py-3 font-medium transition-all duration-200;
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
     border: 2px solid hsl(var(--foreground));
     border-radius: 4px 12px 4px 12px;
     position: relative;
@@ -251,7 +310,7 @@
 
   /* Paperclip decoration */
   .paperclip::before {
-    content: '📎';
+    content: "📎";
     position: absolute;
     top: -10px;
     right: 20px;
@@ -262,20 +321,20 @@
 
 @layer utilities {
   .font-marker {
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
   }
 
   .font-handwriting {
-    font-family: 'Caveat', cursive;
+    font-family: "Caveat", cursive;
   }
 
   .font-mono {
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
   }
 
   /* Text shadow for sketch effect */
   .text-sketch {
-    text-shadow: 
+    text-shadow:
       1px 1px 0 hsl(var(--background)),
       -1px -1px 0 hsl(var(--background)),
       1px -1px 0 hsl(var(--background)),

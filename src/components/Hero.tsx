@@ -177,7 +177,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         {/* Greeting */}
         <motion.p
-          className="font-handwriting text-2xl md:text-3xl text-red-500 mb-4"
+          className="font-handwriting text-2xl md:text-3xl text-accent mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

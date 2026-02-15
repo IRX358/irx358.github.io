@@ -94,14 +94,14 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
           )}
         </motion.a>
 
-        {/* GitHub Octocat peeking (for GitHub links) */}
         {isGithub && (
           <motion.div
             className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity"
             initial={{ y: 20, x: 10 }}
             whileHover={{ y: 0, x: 0 }}
           >
-            <div className="text-4xl transform -rotate-12">🐼</div>
+            <div className="text-4xl transform -rotate-12">🐧</div>
+            
           </motion.div>
         )}
       </div>
