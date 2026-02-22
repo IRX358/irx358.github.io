@@ -112,7 +112,7 @@ export const portfolioData = {
       description: "A web-based Financial Forensics Engine that processes transaction data and exposes money muling networks through graph analysis and interactive visualization.",
       tech: ["Python", "Graph Theory", "NetworkX", "FastAPI", "React"],
       link: "https://fin-graphix-79n1.vercel.app/",
-      icon: "Money"
+      icon: "dollar"
     },
     {
       title: "Portfolio Website",
