@@ -67,7 +67,7 @@ export const portfolioData = {
     tools: [
       { name: "Git & GitHub", level: 85 },
       { name: "VS Code", level: 95 },
-      { name: "Virtual Environments", level: 80 },
+      { name: "Linux", level: 80 },
       { name: "Docker", level: 0 },
       { name: "CI/CD Pipeline", level: 0 },
       { name: "Agile & Scrum", level: 0 }
@@ -79,17 +79,10 @@ export const portfolioData = {
       { name: "OWASP ZAP", level: 0 },
       { name: "Metasploit", level: 0 },
       { name: "Wiz", level: 0 }
-    ],
-    machineLearning: [
-      { name: "NumPy", level: 12 },
-      { name: "Pandas", level: 10 },
-      { name: "PyTorch", level: 0 },
-      { name: "TensorFlow", level: 0 },
-      { name: "Hugging Face", level: 0 }
     ]
   },
 
-  projects: [
+ projects: [
       {
       title: "Insider Navs",
       status: "Ongoing",
@@ -107,12 +100,12 @@ export const portfolioData = {
       icon: "bus"
     },
     {
-      title: "Predictive Maintenance Platform",
+      title: "FinGraphix",
       status: "Completed",
-      description: "A training internship project using deep learning to predict equipment failures from vibration data via spectrograms and CNN models.",
-      tech: ["Python", "Flask", "Machine Learning", "File Processing"],
-      link: "https://github.com/IRX358/Predict_M_Sys",
-      icon: "cog"
+      description: "A web-based Financial Forensics Engine that processes transaction data and exposes money muling networks through graph analysis and interactive visualization.",
+      tech: ["Python", "Graph Theory", "NetworkX", "FastAPI", "React"],
+      link: "https://fin-graphix-79n1.vercel.app/",
+      icon: "dollar"
     },
     {
       title: "Portfolio Website",
@@ -129,14 +122,6 @@ export const portfolioData = {
       tech: ["WebDev", "FastAPI", "MySQL", "Model Training"],
       link: "https://github.com/IRX358/InternSaathi",
       icon: "briefcase"
-    },
-    {
-      title: "Flight Booking Management System",
-      status: "Completed",
-      description: "An academic PHP + MySQL backend system managing bookings, payments, passengers, and flights.",
-      tech: ["PHP", "MySQL", "HTML5", "CSS3", "Responsive Design"],
-      link: "https://www.linkedin.com/in/irfan-basha-396b97282/details/projects/",
-      icon: "plane"
     }
   ],
 
