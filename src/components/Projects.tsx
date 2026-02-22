@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink, Github, Bus, Cog, User, Briefcase, Plane, Globe, MapPinCheckInside, Money} from 'lucide-react';
+import { ExternalLink, Github, Bus, Cog, User, Briefcase, Plane, Globe, MapPinCheckInside, DollarSign} from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -11,7 +11,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   plane: Plane,
   globe: Globe,
   pin: MapPinCheckInside,
-  Money: Money
+  dollar:DollarSign
 };
 
 const ProjectCard = ({ project, index }: { project: typeof portfolioData.projects[0]; index: number }) => {
