@@ -31,7 +31,7 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const keywords = ['Python', 'web development', 'backend systems', 'fast learner', 'technical challenges'];
+  const keywords = ['Web development', 'backend systems', 'System Design', 'Cyber Security'];
 
   const renderDescription = () => {
     let text = hero.description;
@@ -90,7 +90,7 @@ const About = () => {
 
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
               I thrive on building <HighlightText>reliable</HighlightText>, 
-              creative, and future-ready web solutions with a developer's mindset 
+              creative, and future-ready solutions with a developer's mindset 
               and an explorer's <HighlightText>curiosity</HighlightText>.
             </p>
           </motion.div>
