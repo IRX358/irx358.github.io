@@ -2,7 +2,7 @@ export const portfolioData = {
   siteMeta: {
     name: "IRFAN IR",
     role: "B.Tech CS Student",
-    profileImage: "/pfp0.jpg",
+    profileImage: "./public/pfp0.jpg",
     socials: {
       github: "https://github.com/IRX358",
       linkedin: "https://www.linkedin.com/in/irfan-basha-396b97282/",
@@ -30,7 +30,7 @@ export const portfolioData = {
       {
         label: "Download Resume",
         type: "download",
-        link: "/resume_01.pdf"
+        link: "./public/resume_01.pdf"
       },
       {
         label: "Get In Touch",
@@ -39,7 +39,7 @@ export const portfolioData = {
       }
     ],
     images: {
-      mainProfile: "/pfp2.jpg",
+      mainProfile: "./public/pfp2.jpg",
       decorativeIcons: ["Code", "Database"]
     }
   },
