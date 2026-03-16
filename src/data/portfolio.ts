@@ -5,7 +5,7 @@ export const portfolioData = {
     profileImage: "/pfp0.jpg",
     socials: {
       github: "https://github.com/IRX358",
-      linkedin: "https://www.linkedin.com/in/irfan-basha-396b97282/",
+      linkedin: "https://www.linkedin.com/in/irfan358",
       telegram: "https://t.me/IRX358"
     }
   },
