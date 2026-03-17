@@ -187,13 +187,6 @@ irx358.github.io/
 
 ---
 
-
-
-
-Here's your **static footer section** without animations:
-
----
-
 <!-- Footer Divider -->
 <img src="https://capsule-render.vercel.app/api?type=rect&color=6366F1&height=3&section=footer&text=&fontSize=0" width="100%"/>
 
