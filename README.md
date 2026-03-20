@@ -5,9 +5,6 @@
     <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=40&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=IRFAN+IR" alt="Typing SVG" />
   </a>
 
-  <!-- Animated Logo/Badge -->
-  <img src="https://img.shields.io/badge/IR-Portfolio-6366F1?style=for-the-badge&logo=react&logoColor=white&labelColor=1e1e2e" alt="Portfolio Badge" />
-
   <!-- Badges Row -->
   <p align="center">
     <img src="https://img.shields.io/badge/Status-Active%20Development-22c55e?style=flat-square&logo=vercel&logoColor=white" />
@@ -187,13 +184,6 @@ irx358.github.io/
 ```
 
 </details>
-
----
-
-
-
-
-Here's your **static footer section** without animations:
 
 ---
 
