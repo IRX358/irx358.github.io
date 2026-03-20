@@ -149,7 +149,7 @@ export const portfolioData = {
   ],
 
   contact: {
-    email: "ir.358.786@gmail.com",
+    email: "talk@irfan.qzz.io",
     socials: {
       github: "https://github.com/IRX358",
       linkedin: "https://www.linkedin.com/in/irfan-basha-396b97282/"
