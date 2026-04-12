@@ -53,7 +53,6 @@ export const portfolioData = {
       { name: "React", level: 60 }
     ],
     backend: [
-      { name: "Python - Flask", level: 75 },
       { name: "Python - FastAPI", level: 60 },
       { name: "PHP", level: 40 },
       { name: "Node.js", level: 0 },
@@ -73,19 +72,12 @@ export const portfolioData = {
       { name: "Agile & Scrum", level: 0 }
     ],
     cyberSecurity: [
-      { name: "Kali Linux", level: 0 },
+      { name: "Linux", level: 0 },
       { name: "Wireshark", level: 0 },
       { name: "OpenVAS", level: 0 },
       { name: "OWASP ZAP", level: 0 },
       { name: "Metasploit", level: 0 },
       { name: "Wiz", level: 0 }
-    ],
-    machineLearning: [
-      { name: "NumPy", level: 12 },
-      { name: "Pandas", level: 10 },
-      { name: "PyTorch", level: 0 },
-      { name: "TensorFlow", level: 0 },
-      { name: "Hugging Face", level: 0 }
     ]
   },
 
@@ -141,11 +133,12 @@ export const portfolioData = {
   ],
 
   certifications: [
-    "Full Stack Web Dev [freecodecamp]",
-    "Accenture - Job Simulation [Forage]",
-    "Responsive Web Dev [freecodecamp]",
-    "Deloitte - Cyber Job Simulation [Forage]",
-    "Data Science Beginner [SoloLearn]"
+    { title: "Responsive Web Dev [freecodecamp]", logo: "/certi2.jpg" },
+    { title: "Frontend Dev - React [Hackerrank]", logo: "/certi4.jpg" },
+    { title: "Rest API Intermediate [Hackerrank]", logo: "/certi4.jpg" },
+    { title: "Accenture - Job Simulation [Forage]", logo: "/certi1.jpg" },
+    { title: "Deloitte - Cyber Job Simulation [Forage]", logo: "/certi3.jpg" },
+    { title: "JavaScript Intermediate [Hackerrank]", logo: "/certi4.jpg" }
   ],
 
   contact: {

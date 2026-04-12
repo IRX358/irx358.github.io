@@ -123,16 +123,17 @@ const Contact = () => {
           <div className="flex justify-center pt-4">
             <motion.button
               type="submit"
-              className={`sketch-button flex items-center gap-3 bg-foreground text-background ${isFlying ? 'pointer-events-none' : ''}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className={`group inline-flex items-center gap-3 px-6 py-3 font-medium font-marker border-2 bg-foreground text-background border-foreground transition-all duration-300 hover:shadow-[4px_4px_0_0] hover:shadow-foreground ${isFlying ? 'pointer-events-none' : ''}`}
+              style={{ borderRadius: '4px 12px 4px 12px' }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               animate={isFlying ? {
                 x: '100vw',
                 y: '-50vh',
                 rotate: 30,
                 opacity: 0,
               } : {}}
-              transition={isFlying ? { duration: 1, ease: "easeOut" } : {}}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
               <Send className="w-5 h-5" />
               Send Message

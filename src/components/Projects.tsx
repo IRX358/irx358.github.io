@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Bus, Cog, User, Briefcase, Plane, Globe, MapPinCheckInside, DollarSign} from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
@@ -18,6 +18,7 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const Icon = iconMap[project.icon] || Globe;
+  const [showEmoji, setShowEmoji] = useState(false);
 
   const isGithub = project.link.includes('github.com');
 
@@ -32,42 +33,56 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
         rotate: 0,
         transition: { duration: 0.2 }
       }}
+      onMouseEnter={() => setShowEmoji(true)}
+      onMouseLeave={() => setShowEmoji(false)}
       className="relative group"
     >
-      {/* Paperclip */}
-      <div className="absolute -top-4 right-8 text-3xl transform rotate-12 z-10">
-        📎
-      </div>
+      {/* Penguin Emoji Popup - only for GitHub projects */}
+      <AnimatePresence>
+        {showEmoji && isGithub && (
+          <motion.div
+            className="absolute -bottom-2 -right-2 z-20 pointer-events-none"
+            initial={{ opacity: 0, x: 10, y: 10, scale: 0.5 }}
+            animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 5, y: 5, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <span className="text-3xl">🐧</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Card */}
-      <div className="bg-card border-2 border-foreground/20 p-6 pt-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
-        style={{ borderRadius: '4px 16px 4px 16px' }}
+      <div className="paperclip bg-card border-2 border-border rounded-lg p-5 hover:border-accent/50 transition-all duration-300 relative"
       >
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-secondary rounded-md border border-border">
-              <Icon className="w-6 h-6 text-accent" />
-            </div>
-            <div>
-              <h3 className="font-marker text-xl text-foreground">{project.title}</h3>
-              <span className="text-xs font-mono text-muted-foreground">{project.status}</span>
-            </div>
+        <div className="flex items-start gap-3 mb-3">
+          <motion.div
+            className="p-2 bg-accent/10 rounded-lg border border-accent/20"
+            whileHover={{ rotate: [0, -5, 5, 0] }}
+            transition={{ duration: 0.5 }}
+          >
+            <Icon className="w-5 h-5 text-accent" />
+          </motion.div>
+          <div className="flex-1">
+            <h3 className="font-marker text-lg text-foreground mb-1">{project.title}</h3>
+            <span className="inline-block px-2 py-0.5 text-xs font-mono bg-muted rounded-full text-muted-foreground">
+              {project.status}
+            </span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="font-mono text-sm text-muted-foreground mb-6 leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
+        <p className="font-handwriting text-base text-muted-foreground mb-4">
           {project.description}
         </p>
 
-        {/* Tech Stack as Masking Tape Tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {project.tech.map((tech, idx) => (
+        {/* Tech Stack with masking tape */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tech.map((tech) => (
             <span
               key={tech}
-              className="masking-tape text-[10px]"
-              style={{ transform: `rotate(${(idx % 3 - 1) * 2}deg)` }}
+              className="px-2 py-1 text-xs font-mono border border-foreground/20 rounded hover:border-accent/40 transition-colors"
             >
               {tech}
             </span>
@@ -79,32 +94,21 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:text-accent/80 transition-colors"
+          className="inline-flex items-center gap-2 font-mono text-sm text-accent hover:text-accent/80 transition-colors sketch-underline"
           whileHover={{ x: 5 }}
         >
           {isGithub ? (
             <>
               <Github className="w-4 h-4" />
-              View on GitHub
+              View on GitHub →
             </>
           ) : (
             <>
               <ExternalLink className="w-4 h-4" />
-              Visit Project
+              Visit Project →
             </>
           )}
         </motion.a>
-
-        {isGithub && (
-          <motion.div
-            className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity"
-            initial={{ y: 20, x: 10 }}
-            whileHover={{ y: 0, x: 0 }}
-          >
-            <div className="text-4xl transform -rotate-12">🐧</div>
-            
-          </motion.div>
-        )}
       </div>
     </motion.div>
   );
@@ -129,16 +133,16 @@ const Projects = () => {
         </motion.h2>
 
         <motion.p
-          className="font-handwriting text-xl text-center text-muted-foreground mb-16"
+          className="font-handwriting text-xl text-center text-muted-foreground mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3 }}
         >
-          Things I've built with curiosity ✨
+          Some things I've built with curiosity !
         </motion.p>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

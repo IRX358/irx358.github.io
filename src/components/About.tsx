@@ -2,11 +2,11 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { User } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-
+ 
 const HighlightText = ({ children }: { children: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+ 
   return (
     <motion.span
       ref={ref}
@@ -25,24 +25,24 @@ const HighlightText = ({ children }: { children: string }) => {
     </motion.span>
   );
 };
-
+ 
 const About = () => {
   const { hero } = portfolioData;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+ 
   const keywords = ['Web development', 'backend systems', 'System Design', 'Cyber Security'];
-
+ 
   const renderDescription = () => {
     let text = hero.description;
     const parts: (string | JSX.Element)[] = [];
     let lastIndex = 0;
-
+ 
     keywords.forEach((keyword, idx) => {
       const keywordLower = keyword.toLowerCase();
       const textLower = text.toLowerCase();
       const index = textLower.indexOf(keywordLower, lastIndex);
-      
+ 
       if (index !== -1) {
         if (index > lastIndex) {
           parts.push(text.slice(lastIndex, index));
@@ -55,26 +55,30 @@ const About = () => {
         lastIndex = index + keyword.length;
       }
     });
-
+ 
     if (lastIndex < text.length) {
       parts.push(text.slice(lastIndex));
     }
-
+ 
     return parts.length > 0 ? parts : text;
   };
-
+ 
   return (
     <section id="about" className="py-20 relative overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <motion.h2
-          className="font-marker text-4xl md:text-5xl text-center mb-16 text-foreground"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          About Me
-        </motion.h2>
+        <div className="flex items-center gap-4 mb-12">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
+          <motion.h2
+            className="font-marker text-3xl md:text-4xl font-semibold text-foreground tracking-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            About Me
+          </motion.h2>
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -84,17 +88,17 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <p className="font-mono text-base md:text-lg leading-relaxed text-foreground/90">
+            <p className="text-base md:text-lg leading-relaxed text-foreground/90">
               {renderDescription()}
             </p>
-
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+ 
+            <p className="text-base text-muted-foreground leading-relaxed">
               I thrive on building <HighlightText>reliable</HighlightText>, 
-              creative, and future-ready solutions with a developer's mindset 
+              scalable, and future-ready solutions with a developer's mindset 
               and an explorer's <HighlightText>curiosity</HighlightText>.
             </p>
           </motion.div>
-
+ 
           {/* Polaroid Style Photo */}
           <motion.div
             initial={{ opacity: 0, x: 50, rotate: -5 }}
@@ -109,8 +113,8 @@ const About = () => {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.8 }}
             >
-              <span className="font-handwriting text-lg md:text-2xl text-accent whitespace-nowrap">
-                <b>This guy is creative uhh! ✨</b>
+              <span className="text-sm md:text-base text-accent font-medium whitespace-nowrap">
+                Developer & Security Enthusiast
               </span>
               <svg width="50" height="25" viewBox="0 0 50 25" className="text-accent hidden md:block">
                 <motion.path
@@ -136,9 +140,9 @@ const About = () => {
                 />
               </svg>
             </motion.div>
-            <div className="polaroid max-w-sm w-full relative">
+            <div className="card-frame max-w-sm w-full relative bg-card p-3 pb-8 shadow-lg rounded-xl border border-border/50">
               {/* Profile image */}
-              <div className="aspect-square bg-secondary overflow-hidden border-2 border-dashed border-border">
+              <div className="aspect-square bg-secondary overflow-hidden rounded-lg">
                 <img 
                   src="/pfp2.jpg" 
                   alt="Irfan IR"
@@ -146,18 +150,15 @@ const About = () => {
                 />
               </div>
               
-              {/* Polaroid caption */}
+              {/* Card caption */}
               <motion.p
-                className="font-handwriting text-xl text-center mt-5 text-foreground"
+                className="text-lg text-center mt-4 text-foreground font-medium"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 1 }}
               >
-                Irfan IR ⚡
+                Irfan IR
               </motion.p>
-
-              {/* Decorative tape */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-7 bg-highlight/60 rotate-3 shadow-sm" />
             </div>
           </motion.div>
         </div>
@@ -165,5 +166,5 @@ const About = () => {
     </section>
   );
 };
-
+ 
 export default About;

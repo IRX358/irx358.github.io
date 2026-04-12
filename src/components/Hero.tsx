@@ -8,7 +8,7 @@ const AnimatedName = () => {
   
   return (
     <motion.h1 
-      className="font-marker text-6xl md:text-8xl lg:text-9xl text-foreground mb-4"
+      className="font-marker text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -17,13 +17,13 @@ const AnimatedName = () => {
         <motion.span
           key={index}
           className="inline-block"
-          initial={{ opacity: 0, y: 50, rotate: -10 }}
-          animate={{ opacity: 1, y: 0, rotate: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ 
-            delay: index * 0.15,
-            duration: 0.5,
+            delay: index * 0.1,
+            duration: 0.4,
             type: "spring",
-            stiffness: 100
+            stiffness: 120
           }}
         >
           {letter}
@@ -177,12 +177,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         {/* Greeting */}
         <motion.p
-          className="font-handwriting text-2xl md:text-3xl text-accent mb-4"
+          className="text-lg md:text-xl text-accent mb-2 font-medium tracking-wide uppercase"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-         <b>Hello, people! 👋 <br></br> I'm </b> 
+          Hello people , I'm
         </motion.p>
 
         {/* Animated Name */}
@@ -197,12 +197,14 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <TypewriterText text="Building logic from chaos..." />
+          <span className="font-mono text-base md:text-lg text-muted-foreground">
+            <TypewriterText text="Full Stack Developer | Backend Engineer | Cybersecurity" />
+          </span>
         </motion.div>
 
         {/* Description */}
         <motion.p
-          className="font-mono text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
+          className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
@@ -212,12 +214,12 @@ const Hero = () => {
 
         {/* Quote */}
         <motion.blockquote
-          className="font-handwriting text-xl md:text-2xl text-foreground/80 italic max-w-xl mx-auto mb-12"
+          className="text-lg md:text-xl text-foreground/80 max-w-xl mx-auto mb-12 border-l-2 border-accent/50 pl-6 italic"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
         >
-          "{hero.quote}"
+          {hero.quote}
         </motion.blockquote>
 
         {/* Action Buttons */}
@@ -232,13 +234,15 @@ const Hero = () => {
               key={action.label}
               href={action.type === 'download' ? action.link : action.link}
               download={action.type === 'download' ? true : undefined}
-              className={`sketch-button flex items-center gap-2 ${
+              className={`group inline-flex items-center gap-2 px-6 py-3 font-medium transition-all duration-300 border-2 font-marker ${
                 index === 0 
-                  ? 'bg-foreground text-background hover:bg-foreground/90' 
-                  : ''
+                  ? 'bg-foreground text-background border-foreground hover:shadow-[4px_4px_0_0] hover:shadow-foreground' 
+                  : 'bg-background text-foreground border-foreground hover:shadow-[4px_4px_0_0] hover:shadow-foreground'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              style={{ borderRadius: '4px 12px 4px 12px' }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
               onClick={(e) => {
                 if (action.type === 'anchor') {
                   e.preventDefault();

@@ -24,7 +24,7 @@ const SkillBadge = ({ skill, isSelected, onClick }: { skill: Skill; isSelected: 
       {/* Learning Soon tape */}
       {isLearningSoon && (
         <span className="absolute -top-3 -right-2 masking-tape text-[10px]">
-          Learning Soon
+          Soon
         </span>
       )}
       
@@ -41,15 +41,11 @@ const SkillBadge = ({ skill, isSelected, onClick }: { skill: Skill; isSelected: 
         />
       )}
       
-      <span className={isLearningSoon ? 'opacity-60' : ''}>
+      <span className={`${isLearningSoon ? 'opacity-60' : ''} text-foreground font-medium`}>
         {skill.name}
       </span>
       
-      {!isLearningSoon && (
-        <span className="ml-2 text-xs text-muted-foreground">
-          {skill.level}%
-        </span>
-      )}
+      {!isLearningSoon}
     </motion.button>
   );
 };
@@ -62,7 +58,7 @@ const SkillCategory = ({ title, skills, selectedSkill, onSkillClick }: {
 }) => {
   return (
     <div className="mb-8">
-      <h3 className="font-marker text-xl mb-4 text-foreground/80">{title}</h3>
+      <h3 className="font-marker text-xl mb-4 text-foreground">{title}</h3>
       <div className="flex flex-wrap gap-3">
         {skills.map((skill) => (
           <SkillBadge
@@ -118,12 +114,11 @@ const Skills = () => {
   };
 
   const categories = [
-    { title: '🎨 Frontend', skills: skills.frontend },
-    { title: '⚙️ Backend', skills: skills.backend },
-    { title: '🗄️ Databases', skills: skills.databases },
-    { title: '🛠️ Tools', skills: skills.tools },
-    { title: '🔐 Cybersecurity', skills: skills.cyberSecurity },
-    { title: '🤖 Machine Learning', skills: skills.machineLearning },
+    { title: 'Frontend', skills: skills.frontend },
+    { title: 'Backend', skills: skills.backend },
+    { title: 'Databases', skills: skills.databases },
+    { title: 'Tools', skills: skills.tools },
+    { title: 'Cybersecurity', skills: skills.cyberSecurity }
   ];
 
   return (
@@ -145,7 +140,7 @@ const Skills = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3 }}
         >
-          Click a skill to highlight it! ✨
+        
         </motion.p>
 
         {/* Marquee */}
