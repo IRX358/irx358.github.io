@@ -41,7 +41,7 @@ const Navigation = () => {
             />
           </div>
           <div>
-            <h1 className="font-marker text-xl text-foreground">{siteMeta.name}</h1>
+            <h1 className="font-jersey text-xl text-foreground">{siteMeta.name}</h1>
             <p className="text-xs text-muted-foreground font-mono">{siteMeta.role}</p>
           </div>
         </motion.a>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Supermercado+One&family=Jersey+10&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -330,6 +330,11 @@
   .font-mono {
     font-family: "Julius Sans One", sans-serif;
     letter-spacing: 0.05em;
+  }
+
+  .font-jersey {
+    font-family: "Jersey 10", cursive;
+    font-weight: 400;
   }
 
   /* Text shadow for sketch effect */

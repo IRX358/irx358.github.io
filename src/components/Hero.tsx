@@ -8,7 +8,7 @@ const AnimatedName = () => {
   
   return (
     <motion.h1 
-      className="font-marker text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight"
+      className="font-jersey text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
