@@ -37,24 +37,23 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
       onMouseLeave={() => setShowEmoji(false)}
       className="relative group"
     >
-      {/* Penguin Emoji Popup - only for GitHub projects */}
-      <AnimatePresence>
-        {showEmoji && isGithub && (
-          <motion.div
-            className="absolute -bottom-2 -right-2 z-20 pointer-events-none"
-            initial={{ opacity: 0, x: 10, y: 10, scale: 0.5 }}
-            animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 5, y: 5, scale: 0.8 }}
-            transition={{ duration: 0.2 }}
-          >
-            <span className="text-3xl">🐧</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Card */}
       <div className="paperclip bg-card border-2 border-border rounded-lg p-5 hover:border-accent/50 transition-all duration-300 relative"
       >
+        {/* Penguin Emoji Popup - only for GitHub projects, inside card border at bottom right */}
+        <AnimatePresence>
+          {showEmoji && isGithub && (
+            <motion.div
+              className="absolute bottom-4 right-4 z-20 pointer-events-none"
+              initial={{ opacity: 0, y: 10, scale: 0.5 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 5, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              <span className="text-3xl">🐧</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
         {/* Header */}
         <div className="flex items-start gap-3 mb-3">
           <motion.div
