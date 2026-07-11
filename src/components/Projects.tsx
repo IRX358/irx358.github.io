@@ -38,19 +38,19 @@ const ProjectCard = ({ project, index }: { project: typeof portfolioData.project
       className="relative group"
     >
       {/* Card */}
-      <div className="paperclip bg-card border-2 border-border rounded-lg p-5 hover:border-accent/50 transition-all duration-300 relative"
+      <div className="paperclip bg-card border-2 border-border rounded-lg p-5 hover:border-accent/50 transition-all duration-300 relative z-10 overflow-hidden"
       >
-        {/* Penguin Emoji Popup - only for GitHub projects, inside card border at bottom right */}
+        {/* Penguin Emoji Popup - only for GitHub projects, peeps out from card border inside the card at bottom-right */}
         <AnimatePresence>
           {showEmoji && isGithub && (
             <motion.div
-              className="absolute bottom-4 right-4 z-20 pointer-events-none"
-              initial={{ opacity: 0, y: 10, scale: 0.5 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 5, scale: 0.8 }}
-              transition={{ duration: 0.2 }}
+              className="absolute bottom-0 right-4 z-20 pointer-events-none"
+              initial={{ y: 50, rotate: 30, opacity: 0 }}
+              animate={{ y: 0, rotate: -12, opacity: 1 }}
+              exit={{ y: 50, rotate: 30, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
             >
-              <span className="text-3xl">🐧</span>
+              <span className="text-4xl block origin-bottom-right">🐧</span>
             </motion.div>
           )}
         </AnimatePresence>

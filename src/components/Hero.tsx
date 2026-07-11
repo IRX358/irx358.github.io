@@ -4,11 +4,11 @@ import { Download, ArrowDown, Code, Database, Cpu, Binary, Brain, Shield, Monito
 import { portfolioData } from '@/data/portfolio';
 
 const AnimatedName = () => {
-  const name = "IRFAN";
+  const name = "IRFAN IR";
   
   return (
     <motion.h1 
-      className="font-jersey text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight"
+      className="font-nabla text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight whitespace-nowrap"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ const AnimatedName = () => {
             stiffness: 120
           }}
         >
-          {letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </motion.h1>

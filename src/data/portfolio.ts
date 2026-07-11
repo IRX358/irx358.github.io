@@ -53,26 +53,24 @@ export const portfolioData = {
       { name: "React", level: 60 }
     ],
     backend: [
-      { name: "Python - FastAPI", level: 60 },
-      { name: "PHP", level: 40 },
-      { name: "Node.js", level: 0 },
-      { name: "TypeScript", level: 0 }
+      { name: "Python - FastAPI", level: 80 },
+      { name: "API Designing", level: 80 },
+      { name: "Service Integration", level: 80 }
     ],
     databases: [
-      { name: "MySQL", level: 90 },
+      { name: "SupaBase", level: 85 },
       { name: "PostgreSQL", level: 70 },
-      { name: "MongoDB", level: 0 }
+      { name: "Cache and Session Management", level: 60 }
     ],
     tools: [
       { name: "Git & GitHub", level: 85 },
-      { name: "VS Code", level: 95 },
-      { name: "Virtual Environments", level: 80 },
+      { name: "Linux | Shell Scripting", level: 80 },
+      { name: "IDE | Venv", level: 80 },
       { name: "Docker", level: 0 },
       { name: "CI/CD Pipeline", level: 0 },
       { name: "Agile & Scrum", level: 0 }
     ],
     cyberSecurity: [
-      { name: "Linux", level: 0 },
       { name: "Wireshark", level: 0 },
       { name: "OpenVAS", level: 0 },
       { name: "OWASP ZAP", level: 0 },
@@ -150,7 +148,7 @@ export const portfolioData = {
   },
 
   footer: {
-    text: "© 2026 Irfan IR || Built with CURIOSITY"
+    text: "2025 Irfan IR || Built with CURIOSITY"
   }
 };
 
