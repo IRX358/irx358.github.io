@@ -198,7 +198,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
         >
           <span className="font-mono text-base md:text-lg text-muted-foreground">
-            <TypewriterText text="Full Stack Developer | Backend Engineer | Cybersecurity" />
+            <TypewriterText text="Full Stack Dev | Backend Engineer | AI Integration" />
           </span>
         </motion.div>
 

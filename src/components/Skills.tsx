@@ -103,10 +103,11 @@ const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
   const allSkills = [
-    ...skills.frontend,
-    ...skills.backend,
-    ...skills.databases,
-    ...skills.tools,
+    ...skills.languagesCore,
+    ...skills.backendAPIsDB,
+    ...skills.devOpsDeployment,
+    ...skills.aiAssistedDev,
+    ...skills.other,
   ];
 
   const handleSkillClick = (name: string) => {
@@ -114,11 +115,12 @@ const Skills = () => {
   };
 
   const categories = [
-    { title: 'Frontend', skills: skills.frontend },
-    { title: 'Backend', skills: skills.backend },
-    { title: 'Databases', skills: skills.databases },
-    { title: 'Tools', skills: skills.tools },
-    { title: 'Cybersecurity', skills: skills.cyberSecurity }
+    { title: 'Languages & Core', skills: skills.languagesCore },
+    { title: 'Backend — APIs & DB', skills: skills.backendAPIsDB },
+    { title: 'DevOps & Deployment', skills: skills.devOpsDeployment },
+    { title: 'AI-Assisted Development', skills: skills.aiAssistedDev },
+    { title: 'Other', skills: skills.other },
+    { title: 'Cyber Security', skills: skills.cyberSecurity }
   ];
 
   return (

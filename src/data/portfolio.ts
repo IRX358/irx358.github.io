@@ -23,9 +23,9 @@ export const portfolioData = {
   hero: {
     id: "home",
     title: "Hi, I'm IRFAN",
-    subtitle: "B.Tech Computer Science Student",
-    description: "Computer science enthusiast with a keen focus on web development and backend systems. A fast learner with a knack for digging deep into technical challenges, quick to absorb core concepts, and skilled in transforming ideas into robust solutions.",
-    quote: "Building reliable, creative, and future-ready web solutions with a developer's mindset and an explorer's curiosity.",
+    subtitle: "Full Stack Developer | Backend Engineer | AI-Assisted Development",
+    description: "Computer Science undergraduate with a strong engineering mindset and hands-on experience architecting and shipping production-grade, AI-powered web applications — from system design and REST API development to cloud deployment. Adopts a project-oriented and curiosity-driven learning approach, with proficiency in AI-assisted development workflows to build and ship faster without cutting corners on code quality.",
+    quote: "A developer's mindset and an explorer's curiosity — building reliable, scalable, and future-ready solutions.",
     actions: [
       {
         label: "Download Resume",
@@ -45,32 +45,43 @@ export const portfolioData = {
   },
 
   skills: {
-    frontend: [
-      { name: "HTML5", level: 95 },
-      { name: "CSS3", level: 95 },
-      { name: "JavaScript", level: 68 },
-      { name: "Bootstrap & Tailwind CSS", level: 80 },
-      { name: "React", level: 60 }
+    languagesCore: [
+      { name: "Python", level: 85 },
+      { name: "HTML", level: 95 },
+      { name: "React", level: 70 },
+      { name: "JavaScript", level: 75 },
+      { name: "SQL", level: 80 },
+      { name: "Bash / Shell Scripting", level: 75 },
+      { name: "OOP", level: 85 }
     ],
-    backend: [
-      { name: "Python - FastAPI", level: 80 },
-      { name: "API Designing", level: 80 },
-      { name: "Service Integration", level: 80 }
+    backendAPIsDB: [
+      { name: "FastAPI", level: 85 },
+      { name: "REST API Design", level: 85 },
+      { name: "PostgreSQL", level: 75 },
+      { name: "DB Architecture", level: 70 },
+      { name: "Caching & Load Balancing", level: 65 }
     ],
-    databases: [
-      { name: "SupaBase", level: 85 },
-      { name: "PostgreSQL", level: 70 },
-      { name: "Cache and Session Management", level: 60 }
+    devOpsDeployment: [
+      { name: "Git / GitHub", level: 85 },
+      { name: "CI/CD", level: 70 },
+      { name: "Docker", level: 65 },
+      { name: "AWS (CloudFormation, VPC, CDN, EC2, S3, ASG, ALB)", level: 65 },
+      { name: "Vercel", level: 80 }
     ],
-    tools: [
-      { name: "Git & GitHub", level: 85 },
-      { name: "Linux | Shell Scripting", level: 80 },
-      { name: "IDE | Venv", level: 80 },
-      { name: "Docker", level: 0 },
-      { name: "CI/CD Pipeline", level: 0 },
-      { name: "Agile & Scrum", level: 0 }
+    aiAssistedDev: [
+      { name: "ML Models & AI Web Integrations", level: 70 },
+      { name: "Prompt Engineering", level: 80 },
+      { name: "AI Pair-Programming", level: 85 }
     ],
-    cyberSecurity: [
+    other: [
+      { name: "System Design", level: 75 },
+      { name: "Linux", level: 80 },
+      { name: "UI/UX Fundamentals", level: 75 },
+      { name: "Cybersecurity Fundamentals", level: 65 },
+      { name: "Team Leadership", level: 85 },
+      { name: "Technical Presentations", level: 80 }
+    ],
+     cyberSecurity: [
       { name: "Wireshark", level: 0 },
       { name: "OpenVAS", level: 0 },
       { name: "OWASP ZAP", level: 0 },
@@ -93,15 +104,15 @@ export const portfolioData = {
       status: "Completed",
       description: "An AI-powered fleet management prototype designed to modernize the BMTC by bridging the gap between control centers and on-field conductors. Uses a recommendation engine to predict passenger demand and optimize bus-route allocation.",
       tech: ["WebDev", "FastAPI", "Model Training"],
-      link: "https://routesaathi-prototype.vercel.app/",
+      link: "https://github.com/IRX358/RouteSaathi-2.0",
       icon: "bus"
     },
     {
-      title: "FinGraphix",
+      title: "RazorRecover",
       status: "Completed",
-      description: "A web-based Financial Forensics Engine that processes transaction data and exposes money muling networks through graph analysis and interactive visualization.",
-      tech: ["Python", "Graph Theory", "NetworkX", "FastAPI", "React"],
-      link: "https://fin-graphix-79n1.vercel.app/",
+      description: "Built an autonomous revenue recovery engine featuring a dual-mode LLM agent with deterministic pattern matching & self-calibrating feedback loops, integrating Razorpay webhooks with idempotency-backed automated capture pipelines.",
+      tech: ["React", "FastAPI", "Razorpay", "SQLite", "SciPy", "Gemini API"],
+      link: "https://github.com/IRX358/razorrecover",
       icon: "dollar"
     },
     {
@@ -123,11 +134,11 @@ export const portfolioData = {
   ],
 
   strengths: [
-    "Strong problem-solving skills",
-    "Fast learning capability",
-    "Solid grasp of both frontend and backend tech",
-    "Consistent in delivering clean, organized, and efficient code",
-    "Ready to adapt to new technologies and frameworks"
+    "Rapid Learner",
+    "Highly Adaptive",
+    "Disciplined & Consistent",
+    "Ownership-Driven",
+    "Curiosity-Fueled"
   ],
 
   certifications: [
